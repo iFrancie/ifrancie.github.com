@@ -1,55 +1,78 @@
 body {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-between;
-  background-color: #ccc;
-  font-size: 1.25rem;
-  line-height: 1.5;
-  border: 2px solid #f00;
-}
-.container {
-  max-width: 960px;
-  margin: 0 auto;
-}
-.header {
-  margin-top: 2em;
-  margin-left: 2em;
-  border: 2px solid #008000;
-}
-.header .blog-title .logo {
-  color: #aaa;
-  font-size: 2em;
-  font-family: "Comic Sans MS", cursive, LiSu, sans-serif;
-  text-decoration: none;
-}
-.header .menu {
   margin: 0;
   padding: 0;
+  font: 14px/1.5 "Courier", LiSu, sans-serif;
+  background-color: #ccc;
 }
-.header .menu .menu-item {
-  display: inline-block;
-  margin-right: 10px;
+::selection {
+  color: #ff0;
 }
-.header .menu .menu-item-link {
+.main {
+  position: absolute;
+  right: 6em;
+  top: 2em;
+  width: 65%;
+}
+.sidebar {
+  position: fixed;
+  margin: 0 2em 0 0;
+  width: 20%;
+  text-align: center;
+  background-color: #363636;
+  color: #aaa;
+  height: 100%;
+}
+.sidebar .footer {
+  position: absolute;
+  bottom: 2em;
+  width: 100%;
+}
+.sidebar .blog-title {
+  width: 200px;
+  height: 200px;
+  margin: 20px auto;
+  line-height: 200px;
+  text-align: center;
+  background: #ee3b3b;
+  border-radius: 50%;
+}
+.sidebar .logo {
+  font: 30px/1.5 "Courier", LiSu, sans-serif;
+  text-decoration: none;
+}
+.sidebar .navbar {
+  margin: 20px auto;
+  font-size: 1.5em;
+}
+.sidebar .menu {
+  list-style-type: none;
+  padding: 0;
+}
+.sidebar .menu .menu-item {
+  margin: 1em;
+}
+.sidebar .menu .menu-item-link {
   color: #aaa;
   text-decoration: none;
 }
-.header .menu .menu-item-link:hover {
-  color: #368ccb;
+.sidebar .menu .menu-item-link:hover {
+  color: #ee3b3b;
 }
 .post {
-  margin: 1em auto;
   padding: 30px 50px;
+  font: 14px/1.5 "MarkerFelt", sans-serif;
+}
+.posts {
   background-color: #fff;
-  border: 1px solid #ddd;
-  box-shadow: 0 0 2px #ddd;
-  border: 2px solid #ff0;
+  color: #000;
+  border-radius: 15px;
 }
 .posts .post:first-child {
   margin-top: 0;
 }
 .posts .post-title {
   font-size: 1.5em;
+  text-align: center;
 }
 .posts .post-title .post-title-link {
   color: #368ccb;
