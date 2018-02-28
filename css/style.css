@@ -1,17 +1,63 @@
 body {
   margin: 0;
   padding: 0;
-  font: 14px/1.5 "Courier", LiSu, sans-serif;
+  font: 20px/1.5 "Courier", LiSu, sans-serif;
   background-color: #ccc;
 }
 ::selection {
-  color: #ff0;
+  color: #ee2c2c;
 }
 .main {
   position: absolute;
   right: 6em;
-  top: 2em;
+  top: 1em;
   width: 65%;
+}
+.post::after {
+  content: "";
+  position: absolute;
+  right: 20px;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  box-shadow: -2px 0 4px;
+  transform: rotate(-6deg);
+  z-index: -2;
+  background-color: #f5f5dc;
+}
+.post::before {
+  content: "";
+  position: absolute;
+  right: 20px;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  box-shadow: -2px 0 4px;
+  transform: rotate(-2deg);
+  z-index: -1;
+  background-color: #f5f5dc;
+}
+.archive::before {
+  content: "";
+  position: absolute;
+  height: 50%;
+  bottom: 0;
+  left: 10px;
+  right: 10px;
+  box-shadow: 0 0 20px;
+  z-index: -1;
+  background-color: #fff;
+}
+.archive::after {
+  content: "";
+  position: absolute;
+  height: 50%;
+  bottom: 0;
+  left: 10px;
+  right: 10px;
+  box-shadow: 0 0 20px;
+  z-index: -1;
+  background-color: #fff;
 }
 .sidebar {
   position: fixed;
@@ -37,12 +83,11 @@ body {
   border-radius: 50%;
 }
 .sidebar .logo {
-  font: 30px/1.5 "Courier", LiSu, sans-serif;
+  font-size: 2em;
   text-decoration: none;
 }
 .sidebar .navbar {
   margin: 20px auto;
-  font-size: 1.5em;
 }
 .sidebar .menu {
   list-style-type: none;
@@ -61,27 +106,52 @@ body {
 .post {
   padding: 30px 50px;
   font: 14px/1.5 "MarkerFelt", sans-serif;
-}
-.posts {
-  background-color: #fff;
+  background-color: #f5f5dc;
+  box-shadow: -2px 0 4px;
   color: #000;
-  border-radius: 15px;
 }
-.posts .post:first-child {
+.post .post:first-child {
   margin-top: 0;
 }
-.posts .post-title {
+.post .post-title {
   font-size: 1.5em;
   text-align: center;
 }
-.posts .post-title .post-title-link {
+.post .post-title .post-title-link {
   color: #368ccb;
   text-decoration: none;
 }
-.posts .post-content a {
+.post .post-content a {
   color: #368ccb;
   text-decoration: none;
 }
-.posts .post-meta {
+.post .post-meta {
   color: #bababa;
+}
+.archive {
+  margin: 2em auto;
+  padding: 10px 20px;
+  background-color: #f5f5dc;
+  box-shadow: 0 0 2px;
+  position: relative;
+}
+.archive .post-archive {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.archive .post-archive .post-item {
+  margin: 5px 0;
+}
+.archive .post-archive .post-item .post-date {
+  display: inline-block;
+  margin-right: 10px;
+  color: #bababa;
+}
+.archive .post-archive .post-item .post-title {
+  color: #368ccb;
+  text-decoration: none;
+}
+.archive .post-archive .post-item .post-title:hover {
+  color: #ee3b3b;
 }
