@@ -1,8 +1,8 @@
 body {
   margin: 0;
   padding: 0;
-  font: 20px/1.5 "Courier", LiSu, sans-serif;
-  background-color: #ccc;
+  background-color: #363636;
+  color: #fff;
 }
 ::selection {
   color: #ee2c2c;
@@ -13,117 +13,89 @@ body {
   top: 1em;
   width: 65%;
 }
-.post::after {
-  content: "";
-  position: absolute;
-  right: 20px;
-  bottom: 0;
-  width: 100%;
-  height: 100%;
-  box-shadow: -2px 0 4px;
-  transform: rotate(-6deg);
-  z-index: -2;
-  background-color: #f5f5dc;
-}
-.post::before {
-  content: "";
-  position: absolute;
-  right: 20px;
-  bottom: 0;
-  width: 100%;
-  height: 100%;
-  box-shadow: -2px 0 4px;
-  transform: rotate(-2deg);
-  z-index: -1;
-  background-color: #f5f5dc;
-}
-.archive::before {
-  content: "";
-  position: absolute;
-  height: 50%;
-  bottom: 0;
-  left: 10px;
-  right: 10px;
-  box-shadow: 0 0 20px;
-  z-index: -1;
-  background-color: #fff;
-}
-.archive::after {
-  content: "";
-  position: absolute;
-  height: 50%;
-  bottom: 0;
-  left: 10px;
-  right: 10px;
-  box-shadow: 0 0 20px;
-  z-index: -1;
-  background-color: #fff;
-}
 .sidebar {
   position: fixed;
   margin: 0 2em 0 0;
   width: 20%;
-  text-align: center;
-  background-color: #363636;
-  color: #aaa;
+  background-color: #696969;
+  color: #fff;
   height: 100%;
-}
-.sidebar .footer {
-  position: absolute;
-  bottom: 2em;
-  width: 100%;
+  font-size: 1.5em;
+  font-family: 'Fredericka the Great', 'KaiTi SC', serif;
+  text-align: right;
 }
 .sidebar .blog-title {
-  width: 200px;
-  height: 200px;
-  margin: 20px auto;
-  line-height: 200px;
-  text-align: center;
-  background: #ee3b3b;
-  border-radius: 50%;
+  text-align: right;
+  margin: 3em 1em 3em auto;
 }
-.sidebar .logo {
+.sidebar .blog-title .intro {
+  width: 100px;
+}
+.sidebar .blog-title .logo {
   font-size: 2em;
   text-decoration: none;
+  color: #fff;
+}
+.sidebar .blog-title .logo:hover {
+  color: #ee3b3b;
 }
 .sidebar .navbar {
-  margin: 20px auto;
+  text-align: right;
+  display: inline-block;
+  border-top: 1px solid #e3e3e3;
 }
-.sidebar .menu {
+.sidebar .navbar .menu {
   list-style-type: none;
   padding: 0;
 }
-.sidebar .menu .menu-item {
+.sidebar .navbar .menu .menu-item {
   margin: 1em;
 }
-.sidebar .menu .menu-item-link {
-  color: #aaa;
+.sidebar .navbar .menu .menu-item-link {
+  color: #fff;
   text-decoration: none;
 }
-.sidebar .menu .menu-item-link:hover {
+.sidebar .navbar .menu .menu-item-link:hover {
   color: #ee3b3b;
+}
+.sidebar .footer {
+  position: absolute;
+  bottom: 1em;
+  right: 0;
+  text-align: right;
+  font-size: 0.6em;
+  border-top: 1px solid #e3e3e3;
+}
+.sidebar .footer .about {
+  margin: 1em;
 }
 .post {
   padding: 30px 50px;
-  font: 14px/1.5 "MarkerFelt", sans-serif;
-  background-color: #f5f5dc;
-  box-shadow: -2px 0 4px;
-  color: #000;
-}
-.post .post:first-child {
-  margin-top: 0;
+  color: #fff;
 }
 .post .post-title {
-  font-size: 1.5em;
+  font-size: 3em;
   text-align: center;
+  font-family: 'Baskerville', 'KaiTi SC', serif;
 }
 .post .post-title .post-title-link {
-  color: #368ccb;
+  color: #cdcdb4;
   text-decoration: none;
 }
+.post .post-title .post-title-link:hover {
+  color: #00ee76;
+}
+.post .post-content {
+  font-family: 'Baskerville', 'KaiTi SC', serif;
+  font-size: 1.5em;
+  line-height: 1.5em;
+}
 .post .post-content a {
-  color: #368ccb;
+  color: #ffa500;
   text-decoration: none;
+}
+.post .post-content a:hover {
+  color: #00ee76;
 }
 .post .post-meta {
   color: #bababa;
@@ -131,17 +103,17 @@ body {
 .archive {
   margin: 2em auto;
   padding: 10px 20px;
-  background-color: #f5f5dc;
+  background-color: #696969;
   box-shadow: 0 0 2px;
-  position: relative;
+  border-radius: 5px;
+  font-family: 'Baskerville', 'KaiTi SC', serif;
 }
 .archive .post-archive {
   list-style: none;
   padding: 0;
-  margin: 0;
 }
 .archive .post-archive .post-item {
-  margin: 5px 0;
+  margin: 10px 0;
 }
 .archive .post-archive .post-item .post-date {
   display: inline-block;
@@ -149,7 +121,7 @@ body {
   color: #bababa;
 }
 .archive .post-archive .post-item .post-title {
-  color: #368ccb;
+  color: #fff;
   text-decoration: none;
 }
 .archive .post-archive .post-item .post-title:hover {
