@@ -127,9 +127,3 @@ body {
 .archive .post-archive .post-item .post-title:hover {
   color: #ee3b3b;
 }
-.tags {
-  margin: 2em auto;
-  padding: 10px 20px;
-  background-color: #696969;
-  color: #fff;
-}
