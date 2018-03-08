@@ -116,9 +116,6 @@ body {
   color: #fff;
   text-decoration: none;
 }
-:hover {
-  color: #ee3b3b;
-}
 .post-tag {
   list-style-type: none;
   margin: 2em auto;
