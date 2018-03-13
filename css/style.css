@@ -80,6 +80,9 @@ main {
   padding: 30px 50px;
   color: #fff;
 }
+.post .post-content {
+  line-height: 1em;
+}
 .post .post-content a {
   color: #ffa500;
 }
